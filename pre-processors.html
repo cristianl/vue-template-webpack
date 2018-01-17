@@ -1,0 +1,421 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Pré-processadores · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="static.html" />
+    
+    
+    <link rel="prev" href="linter.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="structure.html">
+            
+                <a href="structure.html">
+            
+                    
+                    Estrutura de Projetos
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="commands.html">
+            
+                <a href="commands.html">
+            
+                    
+                    Comandos de Build
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="babel.html">
+            
+                <a href="babel.html">
+            
+                    
+                    Configuração do Babel
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="linter.html">
+            
+                <a href="linter.html">
+            
+                    
+                    Configuração do Linter
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.6" data-path="pre-processors.html">
+            
+                <a href="pre-processors.html">
+            
+                    
+                    Pré-processadores
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="static.html">
+            
+                <a href="static.html">
+            
+                    
+                    Lidando com Assets Estáticos
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="env.html">
+            
+                <a href="env.html">
+            
+                    
+                    Variáveis de Ambiente
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="backend.html">
+            
+                <a href="backend.html">
+            
+                    
+                    Integração com Framework de Backend
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="proxy.html">
+            
+                <a href="proxy.html">
+            
+                    
+                    Proxying de APIs Durante o Desenvolvimento
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="unit.html">
+            
+                <a href="unit.html">
+            
+                    
+                    Testes Unitários
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="e2e.html">
+            
+                <a href="e2e.html">
+            
+                    
+                    Testes End-to-end
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="prerender.html">
+            
+                <a href="prerender.html">
+            
+                    
+                    Pré-renderização para SEO
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Pré-processadores</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="pr&#xE9;-processadores">Pr&#xE9;-Processadores</h1>
+<p>Este boilerplate j&#xE1; vem configurado com extra&#xE7;&#xE3;o de CSS dos pr&#xE9;-processadores de CSS mais populares, incluindo LESS, Sass, Stylus e PostCSS. Para utilizar um pr&#xE9;-processador, tudo que voc&#xEA; precisa fazer &#xE9; instalar o seu respectivo <em>loader</em> Webpack. Por exemplo, para usar Sass:</p>
+<pre><code class="lang-bash">npm install sass-loader node-sass --save-dev
+</code></pre>
+<p>Observe que voc&#xEA; tamb&#xE9;m precisa instalar <code>node-sass</code> porque o <code>sass-loader</code> depende dele (como <em>peer dependency</em>).</p>
+<h3 id="usando-pr&#xE9;-processadores-em-componentes">Usando pr&#xE9;-processadores em componentes</h3>
+<p>Uma vez instalado, para usar um pr&#xE9;-processador em seus componentes <code>*.vue</code>, defina o atributo <code>lang</code> na tag <code>&lt;style&gt;</code>:</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">style</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">&quot;scss&quot;</span>&gt;</span><span class="css">
+<span class="hljs-comment">/* write Sass! */</span>
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
+</code></pre>
+<h3 id="nota-sobre-a-sintaxe-sass">Nota sobre a sintaxe Sass</h3>
+<ul>
+<li><code>lang=&quot;scss&quot;</code> corresponde &#xE0; sintaxe que estende CSS (a com chaves - <code>{</code> e <code>}</code> - e ponto-e-v&#xED;rgula).</li>
+<li><code>lang=&quot;sass&quot;</code> corresponde &#xE0; sintaxe que requer indenta&#xE7;&#xE3;o.</li>
+</ul>
+<h3 id="postcss">PostCSS</h3>
+<p>Blocos <code>style</code> em arquivos <code>*.vue</code> e arquivos de <em>stylesheets</em> (<code>*.css</code>, <code>*.scss</code> etc) s&#xE3;o passados pelo PostCSS por padr&#xE3;o, portanto n&#xE3;o &#xE9; necess&#xE1;rio usar outro <em>loader</em> para ele.</p>
+<p>Voc&#xEA; pode simplesmente adicionar os plugins do PostCSS que voc&#xEA; deseja usar ao arquivo <code>.postcssrc.js</code> que se encontra no diret&#xF3;rio raiz do seu projeto:</p>
+<pre><code class="lang-js"><span class="hljs-comment">// https://github.com/michael-ciniawsky/postcss-load-config</span>
+
+<span class="hljs-built_in">module</span>.exports = {
+  <span class="hljs-string">&quot;plugins&quot;</span>: {
+    <span class="hljs-comment">// para editar os browsers-alvo: use o campo &quot;browserslist&quot; do seu package.json</span>
+    <span class="hljs-string">&quot;postcss-import&quot;</span>: {},
+    <span class="hljs-string">&quot;autoprefixer&quot;</span>: {}
+  }
+}
+</code></pre>
+<p>Veja <a href="http://vuejs.github.io/vue-loader/en/features/postcss.html" target="_blank">a documenta&#xE7;&#xE3;o relacionada do vue-loader</a> para mais detalhes.</p>
+<h3 id="arquivos-css-separados">Arquivos CSS separados</h3>
+<p>Para garantir consist&#xEA;ncia na extra&#xE7;&#xE3;o e processamento do seu CSS, &#xE9; recomend&#xE1;vel que os arquivos de <em>stylesheets</em> globais sejam importados no seu componente <code>App.vue</code> raiz. Por exemplo:</p>
+<pre><code class="lang-html"><span class="hljs-comment">&lt;!-- App.vue --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">style</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;./styles/global.less&quot;</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">&quot;less&quot;</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
+</code></pre>
+<p>Observe que voc&#xEA; provavelmente s&#xF3; deve fazer isto com as <em>stylesheets</em> que voc&#xEA; mesmo escreveu para sua aplica&#xE7;&#xE3;o. Bibliotecas j&#xE1; existentes, como Bootstrap ou Semantic UI, podem ser postas dentro de <code>/static</code> e referenciadas diretamente em <code>index.html</code>. Isto evita tempo adicional gasto durante o <em>build</em> e traz melhorias no <em>caching</em> nos browsers. (Veja <a href="static.html">Lidando com Assets Est&#xE1;ticos</a>)</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="linter.html" class="navigation navigation-prev " aria-label="Previous page: Configuração do Linter">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="static.html" class="navigation navigation-next " aria-label="Next page: Lidando com Assets Estáticos">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Pré-processadores","level":"1.6","depth":1,"next":{"title":"Lidando com Assets Estáticos","level":"1.7","depth":1,"path":"static.md","ref":"static.md","articles":[]},"previous":{"title":"Configuração do Linter","level":"1.5","depth":1,"path":"linter.md","ref":"linter.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"pre-processors.md","mtime":"2018-01-17T21:42:10.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-01-17T22:02:21.490Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

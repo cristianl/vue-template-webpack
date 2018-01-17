@@ -1,0 +1,425 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Lidando com Assets Estáticos · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="env.html" />
+    
+    
+    <link rel="prev" href="pre-processors.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="structure.html">
+            
+                <a href="structure.html">
+            
+                    
+                    Estrutura de Projetos
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="commands.html">
+            
+                <a href="commands.html">
+            
+                    
+                    Comandos de Build
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="babel.html">
+            
+                <a href="babel.html">
+            
+                    
+                    Configuração do Babel
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="linter.html">
+            
+                <a href="linter.html">
+            
+                    
+                    Configuração do Linter
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="pre-processors.html">
+            
+                <a href="pre-processors.html">
+            
+                    
+                    Pré-processadores
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.7" data-path="static.html">
+            
+                <a href="static.html">
+            
+                    
+                    Lidando com Assets Estáticos
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="env.html">
+            
+                <a href="env.html">
+            
+                    
+                    Variáveis de Ambiente
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="backend.html">
+            
+                <a href="backend.html">
+            
+                    
+                    Integração com Framework de Backend
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="proxy.html">
+            
+                <a href="proxy.html">
+            
+                    
+                    Proxying de APIs Durante o Desenvolvimento
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="unit.html">
+            
+                <a href="unit.html">
+            
+                    
+                    Testes Unitários
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="e2e.html">
+            
+                <a href="e2e.html">
+            
+                    
+                    Testes End-to-end
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="prerender.html">
+            
+                <a href="prerender.html">
+            
+                    
+                    Pré-renderização para SEO
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Lidando com Assets Estáticos</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="lidando-com-assets-est&#xE1;ticos">Lidando com Assets Est&#xE1;ticos</h1>
+<p>Voc&#xEA; notar&#xE1; que na estrutura do projeto temos dois diret&#xF3;rios para <em>assets</em> est&#xE1;ticos: <code>src/assets</code> e <code>static/</code>. Qual a diferen&#xE7;a entre os dois?</p>
+<h3 id="assets-passados-pelo-webpack">Assets passados pelo Webpack</h3>
+<p>Para responder a essa quest&#xE3;o, primeiro temos que entender como o Webpack lida com <em>assets</em> est&#xE1;ticos. Em componentes <code>*.vue</code>, todos seus templates e CSS s&#xE3;o analisados por <code>vue-html-loader</code> e <code>css-loader</code> a procura de URLs de <em>assets</em>. Por exemplo, em <code>&lt;img src=&quot;./logo.png&quot;&gt;</code> e <code>background: url(./logo.png)</code>, <code>&quot;./logo.png&quot;</code> &#xE9; um <em>path</em> relativo de asset e ser&#xE1; <strong>reconhecido pelo Webpack como uma depend&#xEA;ncia de m&#xF3;dulo</strong>.</p>
+<p>Como <code>logo.png</code> n&#xE3;o &#xE9; JavaScript, quando tratado como uma depend&#xEA;ncia de m&#xF3;dulo, precisamos usar <code>url-loader</code> e <code>file-loader</code> para process&#xE1;-lo. Este template j&#xE1; vem como esses <em>loaders</em> configurados, oferecendo assim alguns recursos como <em>fingerprinting</em> (identifica&#xE7;&#xE3;o &#xFA;nica de uma vers&#xE3;o de um arquivo), e <em>inlining</em> em base64 (inclus&#xE3;o do conte&#xFA;do do <em>asset</em> no c&#xF3;digo compilado), e permite usar <em>paths</em> relativos/de m&#xF3;dulo sem se preocupar com <em>deployment</em>.</p>
+<p>Considerando que esses <em>assets</em> podem ser inclu&#xED;dos via <em>inlining</em>, copiados ou renomeados durante o <em>build</em>, eles essencialmente fazem parte do seu c&#xF3;digo-fonte. &#xC9; por isto que recomendamos p&#xF4;r assets est&#xE1;ticos dentro de <code>/src</code>, junto de outros arquivos do seu c&#xF3;digo-fonte. Na verdade, voc&#xEA; nem precisa p&#xF4;r todos eles em <code>/src/assets</code>: voc&#xEA; pode organiz&#xE1;-los com base em qual m&#xF3;dulo/componente vai us&#xE1;-los. Por exemplo, voc&#xEA; pode p&#xF4;r cada componente em seu pr&#xF3;prio diret&#xF3;rio, com seus <em>assets</em> est&#xE1;ticos a seu lado.</p>
+<h3 id="regras-de-reconhecimento-de-assets">Regras de reconhecimento de assets</h3>
+<ul>
+<li><p><strong>URLs relativos</strong>, por exemplo <code>./assets/logo.png</code>, ser&#xE3;o interpretados como depend&#xEA;ncias de m&#xF3;dulo. Eles ser&#xE3;o substitu&#xED;dos por um URL automaticamente gerado baseado nas suas configura&#xE7;&#xF5;es de <em>output</em> (escrita) do Webpack.</p>
+</li>
+<li><p><strong>URLs sem prefixo</strong>, por exemplo <code>assets/logo.png</code>, ser&#xE3;o tratados da mesma forma que URLs relativos, tornando-se <code>./assets/logo.png</code>.</p>
+</li>
+<li><p><strong>URLs com prefixo <code>~</code></strong> s&#xE3;o tratados como uma requisi&#xE7;&#xE3;o de m&#xF3;dulo, similar a <code>require(&apos;some-module/image.png&apos;)</code>. Voc&#xEA; deve usar esse prefixo se quiser fazer uso das configura&#xE7;&#xF5;es de resolu&#xE7;&#xE3;o de m&#xF3;dulos do Webpack. Por exemplo, se voc&#xEA; definir um <em>alias</em> (caminho alternativo/atalho) de resolu&#xE7;&#xE3;o para <code>assets</code>, dever&#xE1; usar <code>&lt;img src=&quot;~assets/logo.png&quot;&gt;</code> para garantir que esse <em>alias</em> seja utilizado.</p>
+</li>
+<li><p><strong>URLs relativos &#xE0; raiz</strong>, por exemplo <code>/assets/logo.png</code>, n&#xE3;o s&#xE3;o processados.</p>
+</li>
+</ul>
+<h3 id="obter-localiza&#xE7;&#xF5;es-de-assets-no-javascript">Obter localiza&#xE7;&#xF5;es de <em>assets</em> no JavaScript</h3>
+<p>Para que o Webpack retorne localiza&#xE7;&#xF5;es corretas dos <em>assets</em>, voc&#xEA; deve usar <code>require(&apos;./relative/path/to/file.jpg&apos;)</code>, que &#xE9; processado por <code>file-loader</code> e retorna o URL reconhecido. Por exemplo:</p>
+<pre><code class="lang-js">computed: {
+  background () {
+    <span class="hljs-keyword">return</span> <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;./bgs/&apos;</span> + <span class="hljs-keyword">this</span>.id + <span class="hljs-string">&apos;.jpg&apos;</span>)
+  }
+}
+</code></pre>
+<p><strong>Observe que o exemplo acima incluir&#xE1; todas as imagens que estejam em <code>./bgs/</code> no <em>build</em> final.</strong> Isto ocorre porque o Webpack n&#xE3;o tem como identificar qual delas ser&#xE1; usada quando o c&#xF3;digo estiver rodando, portanto precisa incluir todas.</p>
+<h3 id="assets-est&#xE1;ticos-de-verdade">Assets est&#xE1;ticos &quot;de verdade&quot;</h3>
+<p>Em contraste, arquivos em <code>static/</code> n&#xE3;o s&#xE3;o nunca processados pelo Webpack: eles s&#xE3;o copiados diretamente para seu destino final sem modifica&#xE7;&#xF5;es, e com o mesmo nome de arquivo. Refer&#xEA;ncias a esses arquivos precisam ser feitas com <em>paths</em> absolutos, que s&#xE3;o determinados atrav&#xE9;s da jun&#xE7;&#xE3;o de <code>build.assetsPublicPath</code> e <code>build.assetsSubDirectory</code> do arquivo <code>config.js</code>.</p>
+<p>Para exemplificar, usando os seguintes valores padr&#xE3;o:</p>
+<pre><code class="lang-js"><span class="hljs-comment">// config/index.js</span>
+<span class="hljs-built_in">module</span>.exports = {
+  <span class="hljs-comment">// ...</span>
+  build: {
+    assetsPublicPath: <span class="hljs-string">&apos;/&apos;</span>,
+    assetsSubDirectory: <span class="hljs-string">&apos;static&apos;</span>
+  }
+}
+</code></pre>
+<p>Qualquer arquivo posto em <code>static/</code> dever&#xE1; ser referenciado usando o URL absoluto <code>/static/[filename]</code>. Se voc&#xEA; mudar <code>assetSubDirectory</code> para <code>assets</code>, esses URLS precisam ser mudados para <code>/assets/[filename]</code>.</p>
+<p>N&#xF3;s vamos aprender mais sobre o arquivo de configura&#xE7;&#xE3;o na se&#xE7;&#xE3;o sobre <a href="backend.html">integra&#xE7;&#xE3;o com <em>backend</em></a>.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="pre-processors.html" class="navigation navigation-prev " aria-label="Previous page: Pré-processadores">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="env.html" class="navigation navigation-next " aria-label="Next page: Variáveis de Ambiente">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Lidando com Assets Estáticos","level":"1.7","depth":1,"next":{"title":"Variáveis de Ambiente","level":"1.8","depth":1,"path":"env.md","ref":"env.md","articles":[]},"previous":{"title":"Pré-processadores","level":"1.6","depth":1,"path":"pre-processors.md","ref":"pre-processors.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"static.md","mtime":"2018-01-17T21:42:10.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-01-17T22:02:21.490Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

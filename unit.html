@@ -1,0 +1,428 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Testes Unitários · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="e2e.html" />
+    
+    
+    <link rel="prev" href="proxy.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="structure.html">
+            
+                <a href="structure.html">
+            
+                    
+                    Estrutura de Projetos
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="commands.html">
+            
+                <a href="commands.html">
+            
+                    
+                    Comandos de Build
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="babel.html">
+            
+                <a href="babel.html">
+            
+                    
+                    Configuração do Babel
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="linter.html">
+            
+                <a href="linter.html">
+            
+                    
+                    Configuração do Linter
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="pre-processors.html">
+            
+                <a href="pre-processors.html">
+            
+                    
+                    Pré-processadores
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="static.html">
+            
+                <a href="static.html">
+            
+                    
+                    Lidando com Assets Estáticos
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="env.html">
+            
+                <a href="env.html">
+            
+                    
+                    Variáveis de Ambiente
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="backend.html">
+            
+                <a href="backend.html">
+            
+                    
+                    Integração com Framework de Backend
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="proxy.html">
+            
+                <a href="proxy.html">
+            
+                    
+                    Proxying de APIs Durante o Desenvolvimento
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.11" data-path="unit.html">
+            
+                <a href="unit.html">
+            
+                    
+                    Testes Unitários
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="e2e.html">
+            
+                <a href="e2e.html">
+            
+                    
+                    Testes End-to-end
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="prerender.html">
+            
+                <a href="prerender.html">
+            
+                    
+                    Pré-renderização para SEO
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Testes Unitários</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="testes-unit&#xE1;rios">Testes Unit&#xE1;rios</h1>
+<p>Este projeto oferece duas op&#xE7;&#xF5;es para testes unit&#xE1;rios:</p>
+<ol>
+<li>Jest</li>
+<li>Karma e Mocha.</li>
+</ol>
+<h2 id="jest">Jest</h2>
+<ul>
+<li><a href="https://facebook.github.io/jest/" target="_blank">Jest</a>: o <em>runner</em> de testes que abre o JSDOM roda os testes e nos informa os resultados.</li>
+</ul>
+<h3 id="files">Files</h3>
+<ul>
+<li><p><code>setup.js</code></p>
+<p>Jest roda este arquivo antes de rodar os testes unit&#xE1;rios. Ele desativa a dica sobre o modo de produ&#xE7;&#xE3;o do Vue.</p>
+</li>
+</ul>
+<h3 id="mocking-de-depend&#xEA;ncias"><em>Mocking</em> de depend&#xEA;ncias</h3>
+<p>O boilerplate do Jest vem com a capacidade de fazer <em>mock</em> de depend&#xEA;ncias. Veja o <a href="https://facebook.github.io/jest/docs/mock-functions.html" target="_blank">guia de fun&#xE7;&#xF5;es de mock</a> para mais detalhes.</p>
+<h2 id="karma-e-mocha">Karma e Mocha</h2>
+<ul>
+<li><a href="https://karma-runner.github.io/" target="_blank">Karma</a>: o <em>runner</em> de testes que abre browsers, roda os testes, e nos reporta os resultados.</li>
+<li><a href="https://github.com/webpack/karma-webpack" target="_blank">karma-webpack</a>: o plugin do Karma que faz <em>bundles</em> (empacota) nossos testes usando Webpack.</li>
+<li><a href="https://mochajs.org/" target="_blank">Mocha</a>: o framework de testes com o qual escrevemos <em>specs</em>.</li>
+<li><a href="http://chaijs.com/" target="_blank">Chai</a>: biblioteca para <em>assertions</em> de testes que oferece uma sintaxe melhorada para <em>assertions</em>.</li>
+<li><a href="http://sinonjs.org/" target="_blank">Sinon</a>: biblioteca de utilit&#xE1;rios de testes que oferece <em>spies</em>, <em>stubs</em> e <em>mocks</em>.</li>
+</ul>
+<p>Chai e Sinon s&#xE3;o integradas com <a href="https://github.com/kmees/karma-sinon-chai" target="_blank">karma-sinon-chai</a>, portanto todas as interfaces da Chai (<code>should</code>, <code>expect</code>, <code>assert</code>) e <code>sinon</code> est&#xE3;o dispon&#xED;veis globalmente nos arquivos de testes.</p>
+<h3 id="arquivos">Arquivos</h3>
+<ul>
+<li><p><code>index.js</code></p>
+<p>Este &#xE9; o arquivo de entrada usado pelo <code>karma-webpack</code> para empacotar todo o c&#xF3;digo dos testes e o c&#xF3;digo-fonte (para fins de <em>coverage</em>). Em geral, voc&#xEA; pode ignor&#xE1;-lo.</p>
+</li>
+<li><p><code>specs/</code></p>
+<p>Este diret&#xF3;rio &#xE9; onde voc&#xEA; escreve seus testes de fato. Voc&#xEA; pode usar todo ES2015+ e todos os loaders aos quais o Webpack tem suporte em seus testes.</p>
+</li>
+<li><p><code>karma.conf.js</code></p>
+<p>Este &#xE9; o arquivo de configura&#xE7;&#xE3;o do Karma. Veja a <a href="https://karma-runner.github.io/" target="_blank">documenta&#xE7;&#xE3;o do Karma</a> para mais detalhes.</p>
+</li>
+</ul>
+<h3 id="rodando-testes-em-mais-browsers">Rodando testes em mais browsers</h3>
+<p>Voc&#xEA; pode rodar os testes em m&#xFA;ltiplos browsers de verdade, instalando mais <a href="https://karma-runner.github.io/1.0/config/browsers.html" target="_blank">karma launchers</a> e ajustando o campo <code>browsers</code> em <code>test/unit/karma.conf.js</code>.</p>
+<h3 id="mocking-de-depend&#xEA;ncias"><em>Mocking</em> de depend&#xEA;ncias</h3>
+<p>O boilerplate de testes unit&#xE1;rios com Karma vem com <a href="https://github.com/plasticine/inject-loader" target="_blank">inject-loader</a> instalado. Para us&#xE1;-lo com componentes <code>*.vue</code>, veja <a href="http://vue-loader.vuejs.org/en/workflow/testing-with-mocks.html" target="_blank">a documenta&#xE7;&#xE3;o do vue-loader sobre testes com mocks</a>.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="proxy.html" class="navigation navigation-prev " aria-label="Previous page: Proxying de APIs Durante o Desenvolvimento">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="e2e.html" class="navigation navigation-next " aria-label="Next page: Testes End-to-end">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Testes Unitários","level":"1.11","depth":1,"next":{"title":"Testes End-to-end","level":"1.12","depth":1,"path":"e2e.md","ref":"e2e.md","articles":[]},"previous":{"title":"Proxying de APIs Durante o Desenvolvimento","level":"1.10","depth":1,"path":"proxy.md","ref":"proxy.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"unit.md","mtime":"2018-01-17T21:42:10.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-01-17T22:02:21.490Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

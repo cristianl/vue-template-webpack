@@ -1,0 +1,407 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Configuração do Linter · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="pre-processors.html" />
+    
+    
+    <link rel="prev" href="babel.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="structure.html">
+            
+                <a href="structure.html">
+            
+                    
+                    Estrutura de Projetos
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="commands.html">
+            
+                <a href="commands.html">
+            
+                    
+                    Comandos de Build
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="babel.html">
+            
+                <a href="babel.html">
+            
+                    
+                    Configuração do Babel
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.5" data-path="linter.html">
+            
+                <a href="linter.html">
+            
+                    
+                    Configuração do Linter
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="pre-processors.html">
+            
+                <a href="pre-processors.html">
+            
+                    
+                    Pré-processadores
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="static.html">
+            
+                <a href="static.html">
+            
+                    
+                    Lidando com Assets Estáticos
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="env.html">
+            
+                <a href="env.html">
+            
+                    
+                    Variáveis de Ambiente
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="backend.html">
+            
+                <a href="backend.html">
+            
+                    
+                    Integração com Framework de Backend
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="proxy.html">
+            
+                <a href="proxy.html">
+            
+                    
+                    Proxying de APIs Durante o Desenvolvimento
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="unit.html">
+            
+                <a href="unit.html">
+            
+                    
+                    Testes Unitários
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="e2e.html">
+            
+                <a href="e2e.html">
+            
+                    
+                    Testes End-to-end
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="prerender.html">
+            
+                <a href="prerender.html">
+            
+                    
+                    Pré-renderização para SEO
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Configuração do Linter</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="configura&#xE7;&#xE3;o-do-linter">Configura&#xE7;&#xE3;o do <em>Linter</em></h1>
+<p>Este <em>boilerplate</em> usa <a href="https://eslint.org/" target="_blank">ESLint</a> como <em>linter</em>, e usa o <em>preset</em> <a href="https://github.com/feross/standard/blob/master/RULES.md" target="_blank">Standard</a> com algumas pequenas personaliza&#xE7;&#xF5;es.</p>
+<h2 id="eslint-plugin-vue">eslint-plugin-vue</h2>
+<p>N&#xF3;s sempre adicionamos tamb&#xE9;m o <a href="https://github.com/vuejs/eslint-plugin-vue" target="_blank">eslint-plugin-vue</a>, que vem com v&#xE1;rias regras que ajudam a compor componentes Vue consistentes - e ainda pode fazer <em>linting</em> de templates!</p>
+<p>Voc&#xEA; pode encontrar uma lista de todas as regras dispon&#xED;veis no <a href="https://github.com/vuejs/eslint-plugin-vue#gear-configs" target="_blank">github</a>. N&#xF3;s escolhemos adicionar a configura&#xE7;&#xE3;o <code>essential</code>, mas recomendamos que voc&#xEA; mude para o conjunto de regras <code>strongly-recommended</code>, mais amplo, ou ao <code>recommended</code>, quando voc&#xEA; j&#xE1; estiver familiarizado com estes.</p>
+<h2 id="customizing">Customizing</h2>
+<p>Se voc&#xEA; n&#xE3;o ficar satisfeito com as regras de <em>linting</em> padr&#xE3;o, tem v&#xE1;rias op&#xE7;&#xF5;es:</p>
+<ol>
+<li><p>Sobrescreva regras individuais no arquivo <code>.eslintrc.js</code>. Por exemplo, voc&#xEA; pode adicionar a seguinte regra para exigir pontos-e-v&#xED;rgulas ao inv&#xE9;s de omiti-los:</p>
+<pre><code class="lang-js"><span class="hljs-comment">// .eslintrc.js</span>
+<span class="hljs-string">&quot;semi&quot;</span>: [<span class="hljs-number">2</span>, <span class="hljs-string">&quot;always&quot;</span>]
+</code></pre>
+</li>
+<li><p>Escolha um <em>preset</em> (conjunto de regras) do ESLint diferente ao gerar o projeto, por exemplo <a href="https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb" target="_blank">eslint-config-airbnb</a>.</p>
+</li>
+<li><p>Escolha &quot;none&quot; (nenhum) como <em>preset</em> do ESLint ao gerar seu projeto e defina suas pr&#xF3;prias regras. Veja <a href="https://eslint.org/docs/rules/" target="_blank">a documenta&#xE7;&#xE3;o do ESLint</a> para mais detalhes.</p>
+</li>
+</ol>
+<h2 id="corrigindo-erros-de-linting">Corrigindo erros de <em>linting</em></h2>
+<p>Voc&#xEA; pode rodar o comando a seguir para deixar que o ESLint corrija qualquer erro encontrado (quando poss&#xED;vel, pois nem todos erros podem ser corrigidos automaticamente):</p>
+<pre><code>npm run lint -- --fix
+</code></pre><p><em>(O <code>--</code> no meio &#xE9; necess&#xE1;rio para garantir que a op&#xE7;&#xE3;o <code>--fix</code> seja passada ao <code>eslint</code>, n&#xE3;o ao <code>npm</code>. Pode ser omitido se voc&#xEA; estiver usando yarn.)</em></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="babel.html" class="navigation navigation-prev " aria-label="Previous page: Configuração do Babel">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="pre-processors.html" class="navigation navigation-next " aria-label="Next page: Pré-processadores">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Configuração do Linter","level":"1.5","depth":1,"next":{"title":"Pré-processadores","level":"1.6","depth":1,"path":"pre-processors.md","ref":"pre-processors.md","articles":[]},"previous":{"title":"Configuração do Babel","level":"1.4","depth":1,"path":"babel.md","ref":"babel.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"linter.md","mtime":"2018-01-17T21:42:10.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-01-17T22:02:21.490Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
