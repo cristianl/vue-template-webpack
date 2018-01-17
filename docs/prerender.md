@@ -1,36 +1,36 @@
-# Prerendering for SEO
+# Pré-renderização para SEO
 
-If you want to prerender routes that will not significantly change once pushed to production, use this Webpack plugin: [prerender-spa-plugin](https://www.npmjs.com/package/prerender-spa-plugin), which has been tested for use with Vue. For pages that _do_ frequently change, [Prerender.io](https://prerender.io/) and [Netlify](https://www.netlify.com/pricing) both offer plans for regularly re-prerendering your content for search engines.
+Se você deseja pré-renderizar rotas que não mudarão significativamente depois de enviadas para produção, use esse plugin do Webpack: [prerender-spa-plugin](https://www.npmjs.com/package/prerender-spa-plugin), que foi testado para uso com Vue. Para páginas que de fato mudam frequentemente, [Prerender.io](https://prerender.io/) e [Netlify](https://www.netlify.com/pricing) oferecem planos que frequentemente pré-renderizam seu conteúdo, para uso de ferramentas de busca.
 
-## Using `prerender-spa-plugin`
+## Usando o `prerender-spa-plugin`
 
-1. Install it as a dev dependency:
+1. Instale como _dev dependency_:
 
 ```bash
 npm install --save-dev prerender-spa-plugin
 ```
 
-2. Require it in **build/webpack.prod.conf.js**:
+2. Importe em **build/webpack.prod.conf.js**:
 
 ```js
-// This line should go at the top of the file where other 'imports' live in
+// Esta linha deve ser posta no topo do arquivo onde os outros 'imports' estão
 const PrerenderSpaPlugin = require('prerender-spa-plugin')
 ```
 
-3. Configure it in the `plugins` array (also in **build/webpack.prod.conf.js**):
+3. Configure-o na _array_ `plugins` (igualmente em **build/webpack.prod.conf.js**):
 
 ```js
 new PrerenderSpaPlugin(
-  // Path to compiled app
+  // Localização da aplicação depois de compilada
   path.join(__dirname, '../dist'),
-  // List of endpoints you wish to prerender
+  // Lista de endpoints (caminhos) que você deseja pré-renderizar
   [ '/' ]
 )
 ```
 
-If you also wanted to prerender `/about` and `/contact`, then that array would be `[ '/', '/about', '/contact' ]`.
+Se você quisesse pré-renderizar também `/about` e `/contact`, então essa array seria `[ '/', '/about', '/contact' ]`.
 
-4. Enable history mode for `vue-router`:
+4. Ative o modo `history` do `vue-router`:
 ```js
 const router = new VueRouter({
   mode: 'history',

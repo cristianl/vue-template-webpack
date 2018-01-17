@@ -1,55 +1,55 @@
-# Pre-Processors
+# Pré-Processadores
 
-This boilerplate has pre-configured CSS extraction for most popular CSS pre-processors including LESS, SASS, Stylus, and PostCSS. To use a pre-processor, all you need to do is install the appropriate webpack loader for it. For example, to use SASS:
+Este boilerplate já vem configurado com extração de CSS dos pré-processadores de CSS mais populares, incluindo LESS, Sass, Stylus e PostCSS. Para utilizar um pré-processador, tudo que você precisa fazer é instalar o seu respectivo _loader_ Webpack. Por exemplo, para usar Sass:
 
 ``` bash
 npm install sass-loader node-sass --save-dev
 ```
 
-Note you also need to install `node-sass` because `sass-loader` depends on it as a peer dependency.
+Observe que você também precisa instalar `node-sass` porque o `sass-loader` depende dele (como _peer dependency_).
 
-### Using Pre-Processors inside Components
+### Usando pré-processadores em componentes
 
-Once installed, you can use the pre-processors inside your `*.vue` components using the `lang` attribute on `<style>` tags:
+Uma vez instalado, para usar um pré-processador em seus componentes `*.vue`, defina o atributo `lang` na tag `<style>`:
 
 ``` html
 <style lang="scss">
-/* write SASS! */
+/* write Sass! */
 </style>
 ```
 
-### A note on SASS syntax
+### Nota sobre a sintaxe Sass
 
-- `lang="scss"` corresponds to the CSS-superset syntax (with curly braces and semicolons).
-- `lang="sass"` corresponds to the indentation-based syntax.
+- `lang="scss"` corresponde à sintaxe que estende CSS (a com chaves - `{` e `}` - e ponto-e-vírgula).
+- `lang="sass"` corresponde à sintaxe que requer indentação.
 
 ### PostCSS
 
-Styles in `*.vue` files and style files (`*.css`, `*.scss` etc) are piped through PostCSS by default, so you don't need to use a specific loader for it.
+Blocos `style` em arquivos `*.vue` e arquivos de _stylesheets_ (`*.css`, `*.scss` etc) são passados pelo PostCSS por padrão, portanto não é necessário usar outro _loader_ para ele.
 
-You can simply add PostCSS plugins you want to use to the `.postcssrc.js`file in your project's root directory:
+Você pode simplesmente adicionar os plugins do PostCSS que você deseja usar ao arquivo `.postcssrc.js` que se encontra no diretório raiz do seu projeto:
 
 ``` js
 // https://github.com/michael-ciniawsky/postcss-load-config
 
 module.exports = {
   "plugins": {
-    // to edit target browsers: use "browserslist" field in package.json
+    // para editar os browsers-alvo: use o campo "browserslist" do seu package.json
     "postcss-import": {},
     "autoprefixer": {}
   }
 }
 ```
 
-See [vue-loader's related documentation](http://vuejs.github.io/vue-loader/en/features/postcss.html) for more details.
+Veja [a documentação relacionada do vue-loader](http://vuejs.github.io/vue-loader/en/features/postcss.html) para mais detalhes.
 
-### Standalone CSS Files
+### Arquivos CSS separados
 
-To ensure consistent extraction and processing, it is recommended to import global, standalone style files from your root `App.vue` component, for example:
+Para garantir consistência na extração e processamento do seu CSS, é recomendável que os arquivos de _stylesheets_ globais sejam importados no seu componente `App.vue` raiz. Por exemplo:
 
 ``` html
 <!-- App.vue -->
 <style src="./styles/global.less" lang="less"></style>
 ```
 
-Note you should probably only do this for the styles written by yourself for your application. For existing libraries e.g. Bootstrap or Semantic UI, you can place them inside `/static` and reference them directly in `index.html`. This avoids extra build time and also is better for browser caching. (See [Static Asset Handling](static.md))
+Observe que você provavelmente só deve fazer isto com as _stylesheets_ que você mesmo escreveu para sua aplicação. Bibliotecas já existentes, como Bootstrap ou Semantic UI, podem ser postas dentro de `/static` e referenciadas diretamente em `index.html`. Isto evita tempo adicional gasto durante o _build_ e traz melhorias no _caching_ nos browsers. (Veja [Lidando com Assets Estáticos](static.md))

@@ -1,74 +1,74 @@
-# Project Structure
+# Estrutura de Projetos
 
 ``` bash
 .
-├── build/                      # webpack config files
+├── build/                      # arquivos de configuração do webpack
 │   └── ...
 ├── config/
-│   ├── index.js                # main project config
+│   ├── index.js                # configuração principal do projeto
 │   └── ...
 ├── src/
-│   ├── main.js                 # app entry file
-│   ├── App.vue                 # main app component
-│   ├── components/             # ui components
+│   ├── main.js                 # arquivo de entrada da aplicação
+│   ├── App.vue                 # componente principal da aplicação
+│   ├── components/             # componentes de ui
 │   │   └── ...
-│   └── assets/                 # module assets (processed by webpack)
+│   └── assets/                 # assets de módulo (processados por webpack)
 │       └── ...
-├── static/                     # pure static assets (directly copied)
+├── static/                     # assets estáticos puros (copiados diretamente)
 ├── test/
-│   └── unit/                   # unit tests
-│   │   ├── specs/              # test spec files
-│   │   ├── eslintrc            # config file for eslint with extra settings only for unit tests
-│   │   ├── index.js            # test build entry file
-│   │   ├── jest.conf.js        # Config file when using Jest for unit tests
-│   │   └── karma.conf.js       # test runner config file when using Karma for unit tests
-│   │   ├── setup.js            # file that runs before Jest runs your unit tests
-│   └── e2e/                    # e2e tests
-│   │   ├── specs/              # test spec files
-│   │   ├── custom-assertions/  # custom assertions for e2e tests
-│   │   ├── runner.js           # test runner script
-│   │   └── nightwatch.conf.js  # test runner config file
-├── .babelrc                    # babel config
-├── .editorconfig               # indentation, spaces/tabs and similar settings for your editor
-├── .eslintrc.js                # eslint config
-├── .eslintignore               # eslint ignore rules
-├── .gitignore                  # sensible defaults for gitignore
-├── .postcssrc.js               # postcss config
-├── index.html                  # index.html template
-├── package.json                # build scripts and dependencies
-└── README.md                   # Default README file
+│   └── unit/                   # testes unitários
+│   │   ├── specs/              # arquivos de spec de testes
+│   │   ├── eslintrc            # arquivo de configuração do eslint com opções extras apenas para testes unitários
+│   │   ├── index.js            # arquivo de entrada dos testes
+│   │   ├── jest.conf.js        # arquivo de configuração do jest, quando usado
+│   │   └── karma.conf.js       # arquivo de configuração do karma, quando usado para testes unitários
+│   │   ├── setup.js            # arquivo a ser rodado antes do Jest rodar seus testes
+│   └── e2e/                    # testes e2e
+│   │   ├── specs/              # arquivos de spec dos testes
+│   │   ├── custom-assertions/  # assertions personalizadas para testes e2e
+│   │   ├── runner.js           # script runner de testes
+│   │   └── nightwatch.conf.js  # arquivo de configuração do runner de testes
+├── .babelrc                    # configuração do babel
+├── .editorconfig               # indentação, espaços/tabs e configurações similares para seu editor
+├── .eslintrc.js                # configuração do eslint
+├── .eslintignore               # regras para eslint ignorar arquivos
+├── .gitignore                  # configurações básicas sensatas para gitignore
+├── .postcssrc.js               # configuração do postcss
+├── index.html                  # template index.html
+├── package.json                # scripts de build e dependências
+└── README.md                   # arquivo README padrão
 ```
 
 ### `build/`
 
-This directory holds the actual configurations for both the development server and the production webpack build. Normally you don't need to touch these files unless you want to customize Webpack loaders, in which case you should probably look at `build/webpack.base.conf.js`.
+Este diretório contém as configurações propriamente ditas para o servidor de modo de desenvolvimento e do build que o Webpack produz para produção. Normalmente você não precisa mexer nesses arquivos, exceto se quiser personalizar _loaders_ do Webpack. Neste caso, você deve dar uma olhada em `build/webpack.base.conf.js`.
 
 ### `config/index.js`
 
-This is the main configuration file that exposes some of the most common configuration options for the build setup. See [API Proxying During Development](proxy.md) and [Integrating with Backend Framework](backend.md) for more details.
+Este é o arquivo principal de configuração, que expõe algumas das opções de configuração do _build_ mais comuns. Veja [Proxying de APIs Durante o Desenvolvimento](proxy.md) e [Integração com Framework de Backend](backend.md) para mais detalhes.
 
 ### `src/`
 
-This is where most of your application code will live in. How to structure everything inside this directory is largely up to you; if you are using Vuex, you can consult the [recommendations for Vuex applications](http://vuex.vuejs.org/en/structure.html).
+Isto é onde a maior parte do código da sua aplicação se localizará. Como estruturar tudo dentro deste diretório fica basicamente a seu critério; se você está usando Vuex, pode consultar as [recomendações para aplicações Vuex](http://vuex.vuejs.org/en/structure.html).
 
 ### `static/`
 
-This directory is an escape hatch for static assets that you do not want to process with Webpack. They will be directly copied into the same directory where webpack-built assets are generated.
+Este diretório é uma área protegida para arquivos que você não deseja processar via Webpack. Eles serão copiados diretamente ao mesmo diretório aonde são gerados os assets compilados pelo Webpack.
 
-See [Handling Static Assets](static.md) for more details.
+Veja [Lidando com Assets Estáticos](static.md) para mais detalhes.
 
 ### `test/unit`
 
-Contains unit test related files. See [Unit Testing](unit.md) for more details.
+Contém arquivos relacionados a testes unitários. Veja [Testes Unitários](unit.md) para mais detalhes.
 
 ### `test/e2e`
 
-Contains e2e test related files. See [End-to-end Testing](e2e.md) for more details.
+Contém arquivos relacionados a testes _e2e_. Veja [Testes End-to-end](e2e.md) para mais detalhes.
 
 ### `index.html`
 
-This is the **template** `index.html` for our single page application. During development and builds, Webpack will generate assets, and the URLs for those generated assets will be automatically injected into this template to render the final HTML.
+Este é o **template** `index.html` para nossa aplicação _single page_. Durante o desenvolvimento e _builds_, o Webpack gerará _assets_, e os URLs para esses _assets_ gerados serão automaticamente injetados neste template para renderizar o HTML final.
 
 ### `package.json`
 
-The NPM package meta file that contains all the build dependencies and [build commands](commands.md).
+O meta arquivo de pacotes NPM que contém todas as dependências de _build_ e [comandos de build](commands.md).

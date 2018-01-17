@@ -1,12 +1,12 @@
-# Babel Configuration
+# Configuração do Babel
 
-This boilerplate uses [`babel-preset-env`](https://www.npmjs.com/package/babel-preset-env) for configuring babel. You can read more about it here - http://2ality.com/2017/02/babel-preset-env.html.
+Este _boilerplate_ usa [`babel-preset-env`](https://www.npmjs.com/package/babel-preset-env) para configurar babel. Você pode ler mais sobre em - http://2ality.com/2017/02/babel-preset-env.html.
 
-> A Babel preset that compiles ES2015+ down to ES5 by automatically determining the Babel plugins and polyfills you need based on your targeted browser or runtime environments.
+> Um _preset_ de Babel que converte ES2015+ em ES5, determinando automaticamente os plugins e polyfills necessários baseado nos browsers ou ambientes de _runtime_ a serem suportados.
 
-It uses [`browserslist`](https://github.com/ai/browserslist) to parse this information, so we can use any [valid query format supported by `browserslist`](https://github.com/ai/browserslist#queries).
+Esse plugin usa [`browserslist`](https://github.com/ai/browserslist) para interpretar a configuração informada, permitindo o uso de qualquer [formato de configuração aceito pelo `browserslist`](https://github.com/ai/browserslist#queries).
 
-However there is a caveat. `browserslist` recommends defining the target in a common place like `package.json` or in a `.browserslistrc` config file. This allows tools like [`autoprefixer`](https://github.com/postcss/autoprefixer) and [`eslint-plugin-compat`](https://github.com/amilajack/eslint-plugin-compat) to share the config. For this template, `browserslist` is configured in the `package.json`:
+Há um porém. O `browserslist` recomenda definir os browsers-alvo em um arquivo comum como `package.json` ou em um arquivo `.browserslistrc`. Isto permite que ferramentas como [`autoprefixer`](https://github.com/postcss/autoprefixer) e [`eslint-plugin-compat`](https://github.com/amilajack/eslint-plugin-compat) também usem essa configuração. Neste template, `browserslist` é configurado no arquivo `package.json`:
 
 ```json
 {
@@ -19,4 +19,4 @@ However there is a caveat. `browserslist` recommends defining the target in a co
 }
 ```
 
-But the latest stable release of `babel-preset-env`, `v1.6.1` does not support loading the config from `package.json`. So the target environment is repeated in `.babelrc`. If you wish to change your target environment, please be sure to update both `package.json` and `.babelrc`. Note that this has been fixed in the beta version([`@babel/preset-env@7.0.0-beta.34`](https://github.com/babel/babel/tree/master/packages/babel-preset-env)) and the template will be updated once it is out of beta.
+No entanto, a última versão _stable_ do `babel-preset-env` (`v1.6.1`) não carrega configuração definida no `package.json`. Por isso, a lista de browsers/ambientes-alvo precisa ser repetida no `.babelrc`. Se você deseja mudar os ambientes a serem suportados pela sua aplicação, lembre-se de alterar tanto `package.json` quanto `.babelrc`. Observe que isso já foi resolvido na versão beta([`@babel/preset-env@7.0.0-beta.34`](https://github.com/babel/babel/tree/master/packages/babel-preset-env)) e este template será atualizado quando esta sair do estágio beta.

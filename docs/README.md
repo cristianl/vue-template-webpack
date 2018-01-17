@@ -1,12 +1,12 @@
-# Introduction
+# Introdução
 
-This boilerplate is targeted towards large, serious projects and assumes you are somewhat familiar with Webpack and `vue-loader`. Make sure to also read [`vue-loader`'s documentation](https://vue-loader.vuejs.org/) for common workflow recipes.
+Este _boilerplate_ (modelo de projeto) é voltado a projetos grandes e mais complexos, e pressupõe que você já esteja familiarizado com Webpack e `vue-loader`. Não deixe de ler a [documentação do `vue-loader`](https://vue-loader.vuejs.org/), que contém receitas que abrangem usos comuns.
 
-If you just want to try out `vue-loader` or whip out a quick prototype, use the [webpack-simple](https://github.com/vuejs-templates/webpack-simple) template instead.
+Se você quer apenas testar o `vue-loader` ou criar um protótipo simples de forma rápida, use o template [webpack-simple](https://github.com/vuejs-templates/webpack-simple).
 
-## Quickstart
+## Iniciando
 
-To use this template, scaffold a project with [vue-cli](https://github.com/vuejs/vue-cli). **It is recommended to use npm 3+ for a more efficient dependency tree.**
+Para usar este template, crie um _scaffold_ (projeto básico) com [vue-cli](https://github.com/vuejs/vue-cli). **Recomendamos que você use npm 3+, que gera uma árvore de dependências mais eficiente.**
 
 ``` bash
 $ npm install -g vue-cli

@@ -1,8 +1,8 @@
-# API Proxying During Development
+# Proxying de APIs Durante o Desenvolvimento
 
-When integrating this boilerplate with an existing backend, a common need is to access the backend API when using the dev server. To achieve that, we can run the dev server and the API backend side-by-side (or remotely), and let the dev server proxy all API requests to the actual backend.
+Ao integrar este boilerplate com um _backend_ já existente, é comum a necessidade de acessar a API do backend enquanto se usa o servidor de desenvolvimento. Para fazer isto, nós podemos rodar o servidor de desenvolvimento e a API lado a lado (ou de forma remota), e deixar que o servidor de desenvolvimento faça _proxy_ de todas as requisições da API ao verdadeiro backend.
 
-To configure the proxy rules, edit `dev.proxyTable` option in `config/index.js`. The dev server is using [http-proxy-middleware](https://github.com/chimurai/http-proxy-middleware) for proxying, so you should refer to its docs for detailed usage. But here's a simple example:
+Para configurar as regras de proxy, edite a opção `dev.proxyTable` em `config/index.js`. O servidor de desenvolvimento usa [http-proxy-middleware](https://github.com/chimurai/http-proxy-middleware) para _proxying_, portanto você deve consultar a documentação dele para detalhes sobre seu uso. Eis um exemplo simples:
 
 ``` js
 // config/index.js
@@ -10,7 +10,7 @@ module.exports = {
   // ...
   dev: {
     proxyTable: {
-      // proxy all requests starting with /api to jsonplaceholder
+      // fazer proxy de todas requisições que comecem com /api a jsonplaceholder
       '/api': {
         target: 'http://jsonplaceholder.typicode.com',
         changeOrigin: true,
@@ -23,11 +23,11 @@ module.exports = {
 }
 ```
 
-The above example will proxy the request `/api/posts/1` to `http://jsonplaceholder.typicode.com/posts/1`.
+O exemplo acima fará proxy da requisição `/api/posts/1` a `http://jsonplaceholder.typicode.com/posts/1`.
 
-## URL Matching
+## _Matching_ (identificação) de URLs
 
-In addition to static urls you can also use glob patterns to match URLs, e.g. `/api/**`. See [Context Matching](https://github.com/chimurai/http-proxy-middleware#context-matching) for more details. In addition, you can provide a `filter` option that can be a custom function to determine whether a request should be proxied:
+Além de URLs estáticos, você também pode usar _glob patterns_ para identificar URLs, por exemplo `/api/**`. Veja [_Context Matching_](https://github.com/chimurai/http-proxy-middleware#context-matching) para mais detalhes. Além disto, você pode informar uma opção `filter`, que pode ser uma função personalizada para determinar se uma requisição deve passar por _proxy_:
 
 ``` js
 proxyTable: {

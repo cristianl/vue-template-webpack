@@ -1,35 +1,34 @@
-# Linter Configuration
+# Configuração do _Linter_
 
-This boilerplate uses [ESLint](https://eslint.org/) as the linter, and uses the [Standard](https://github.com/feross/standard/blob/master/RULES.md) preset with some small customizations.
+Este _boilerplate_ usa [ESLint](https://eslint.org/) como _linter_, e usa o _preset_ [Standard](https://github.com/feross/standard/blob/master/RULES.md) com algumas pequenas personalizações.
 
 ## eslint-plugin-vue
 
-We always add [eslint-plugin-vue](https://github.com/vuejs/eslint-plugin-vue) as well, which comes with a whole bunch of helpful rules to write consistent Vue components - it can also lint templates!
+Nós sempre adicionamos também o [eslint-plugin-vue](https://github.com/vuejs/eslint-plugin-vue), que vem com várias regras que ajudam a compor componentes Vue consistentes - e ainda pode fazer _linting_ de templates!
 
-You can find an overview of all the available rules on [github](https://github.com/vuejs/eslint-plugin-vue#gear-configs). We chose to add the `essential` configs, but we recommend to switch to the bigger `strongly-recommended` or `recommended` rulesets once you are familiar with them.
+Você pode encontrar uma lista de todas as regras disponíveis no [github](https://github.com/vuejs/eslint-plugin-vue#gear-configs). Nós escolhemos adicionar a configuração `essential`, mas recomendamos que você mude para o conjunto de regras `strongly-recommended`, mais amplo, ou ao `recommended`, quando você já estiver familiarizado com estes.
 
 ## Customizing
 
-If you are not happy with the default linting rules, you have several options:
+Se você não ficar satisfeito com as regras de _linting_ padrão, tem várias opções:
 
-1. Overwrite individual rules in `.eslintrc.js`. For example, you can add the following rule to enforce semicolons instead of omitting them:
+1. Sobrescreva regras individuais no arquivo `.eslintrc.js`. Por exemplo, você pode adicionar a seguinte regra para exigir pontos-e-vírgulas ao invés de omiti-los:
 
   ``` js
   // .eslintrc.js
   "semi": [2, "always"]
   ```
 
-2. Pick a different ESLint preset when generating the project, for example [eslint-config-airbnb](https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb).
+2. Escolha um _preset_ (conjunto de regras) do ESLint diferente ao gerar o projeto, por exemplo [eslint-config-airbnb](https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb).
 
-3. Pick "none" for ESLint preset when generating the project and define your own rules. See [ESLint documentation](https://eslint.org/docs/rules/) for more details.
+3. Escolha "none" (nenhum) como _preset_ do ESLint ao gerar seu projeto e defina suas próprias regras. Veja [a documentação do ESLint](https://eslint.org/docs/rules/) para mais detalhes.
 
-## Fixing Linting Errors
+## Corrigindo erros de _linting_
 
-You can run the following command to let eslint fix any errors it finds (if it can - not all errors are fixable like this):
+Você pode rodar o comando a seguir para deixar que o ESLint corrija qualquer erro encontrado (quando possível, pois nem todos erros podem ser corrigidos automaticamente):
 
 ```
 npm run lint -- --fix
 ```
 
-*(The `--` in the middle is necessary to ensure the `--fix` option is passdd to `eslint`, not to `npm`. It can be omitted whne using yarn)*
-
+*(O `--` no meio é necessário para garantir que a opção `--fix` seja passada ao `eslint`, não ao `npm`. Pode ser omitido se você estiver usando yarn.)*

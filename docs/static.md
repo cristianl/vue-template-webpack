@@ -1,28 +1,28 @@
-# Handling Static Assets
+# Lidando com Assets Estáticos
 
-You will notice in the project structure we have two directories for static assets: `src/assets` and `static/`. What is the difference between them?
+Você notará que na estrutura do projeto temos dois diretórios para _assets_ estáticos: `src/assets` e `static/`. Qual a diferença entre os dois?
 
-### Webpacked Assets
+### Assets passados pelo Webpack
 
-To answer this question, we first need to understand how Webpack deals with static assets. In `*.vue` components, all your templates and CSS are parsed by `vue-html-loader` and `css-loader` to look for asset URLs. For example, in `<img src="./logo.png">` and `background: url(./logo.png)`, `"./logo.png"` is a relative asset path and will be **resolved by Webpack as a module dependency**.
+Para responder a essa questão, primeiro temos que entender como o Webpack lida com _assets_ estáticos. Em componentes `*.vue`, todos seus templates e CSS são analisados por `vue-html-loader` e `css-loader` a procura de URLs de _assets_. Por exemplo, em `<img src="./logo.png">` e `background: url(./logo.png)`, `"./logo.png"` é um _path_ relativo de asset e será **reconhecido pelo Webpack como uma dependência de módulo**.
 
-Because `logo.png` is not JavaScript, when treated as a module dependency, we need to use `url-loader` and `file-loader` to process it. This template has already configured these loaders for you, so you get features such as filename fingerprinting and conditional base64 inlining for free, while being able to use relative/module paths without worrying about deployment.
+Como `logo.png` não é JavaScript, quando tratado como uma dependência de módulo, precisamos usar `url-loader` e `file-loader` para processá-lo. Este template já vem como esses _loaders_ configurados, oferecendo assim alguns recursos como _fingerprinting_ (identificação única de uma versão de um arquivo), e _inlining_ em base64 (inclusão do conteúdo do _asset_ no código compilado), e permite usar _paths_ relativos/de módulo sem se preocupar com _deployment_.
 
-Since these assets may be inlined/copied/renamed during build, they are essentially part of your source code. This is why it is recommended to place Webpack-processed static assets inside `/src`, alongside other source files. In fact, you don't even have to put them all in `/src/assets`: you can organize them based on the module/component using them. For example, you can put each component in its own directory, with its static assets right next to it.
+Considerando que esses _assets_ podem ser incluídos via _inlining_, copiados ou renomeados durante o _build_, eles essencialmente fazem parte do seu código-fonte. É por isto que recomendamos pôr assets estáticos dentro de `/src`, junto de outros arquivos do seu código-fonte. Na verdade, você nem precisa pôr todos eles em `/src/assets`: você pode organizá-los com base em qual módulo/componente vai usá-los. Por exemplo, você pode pôr cada componente em seu próprio diretório, com seus _assets_ estáticos a seu lado.
 
-### Asset Resolving Rules
+### Regras de reconhecimento de assets
 
-- **Relative URLs**, e.g. `./assets/logo.png` will be interpreted as a module dependency. They will be replaced with an auto-generated URL based on your Webpack output configuration.
+- **URLs relativos**, por exemplo `./assets/logo.png`, serão interpretados como dependências de módulo. Eles serão substituídos por um URL automaticamente gerado baseado nas suas configurações de _output_ (escrita) do Webpack.
 
-- **Non-prefixed URLs**, e.g. `assets/logo.png` will be treated the same as the relative URLs and translated into `./assets/logo.png`.
+- **URLs sem prefixo**, por exemplo `assets/logo.png`, serão tratados da mesma forma que URLs relativos, tornando-se `./assets/logo.png`.
 
-- **URLs prefixed with `~`** are treated as a module request, similar to `require('some-module/image.png')`. You need to use this prefix if you want to leverage Webpack's module resolving configurations. For example if you have a resolve alias for `assets`, you need to use `<img src="~assets/logo.png">` to ensure that alias is respected.
+- **URLs com prefixo `~`** são tratados como uma requisição de módulo, similar a `require('some-module/image.png')`. Você deve usar esse prefixo se quiser fazer uso das configurações de resolução de módulos do Webpack. Por exemplo, se você definir um _alias_ (caminho alternativo/atalho) de resolução para `assets`, deverá usar `<img src="~assets/logo.png">` para garantir que esse _alias_ seja utilizado.
 
-- **Root-relative URLs**, e.g. `/assets/logo.png` are not processed at all.
+- **URLs relativos à raiz**, por exemplo `/assets/logo.png`, não são processados.
 
-### Getting Asset Paths in JavaScript
+### Obter localizações de _assets_ no JavaScript
 
-In order for Webpack to return the correct asset paths, you need to use `require('./relative/path/to/file.jpg')`, which will get processed by `file-loader` and returns the resolved URL. For example:
+Para que o Webpack retorne localizações corretas dos _assets_, você deve usar `require('./relative/path/to/file.jpg')`, que é processado por `file-loader` e retorna o URL reconhecido. Por exemplo:
 
 ``` js
 computed: {
@@ -32,13 +32,13 @@ computed: {
 }
 ```
 
-**Note the above example will include every image under `./bgs/` in the final build.** This is because Webpack cannot guess which of them will be used at runtime, so it includes them all.
+**Observe que o exemplo acima incluirá todas as imagens que estejam em `./bgs/` no _build_ final.** Isto ocorre porque o Webpack não tem como identificar qual delas será usada quando o código estiver rodando, portanto precisa incluir todas.
 
-### "Real" Static Assets
+### Assets estáticos "de verdade"
 
-In comparison, files in `static/` are not processed by Webpack at all: they are directly copied to their final destination as-is, with the same filename. You must reference these files using absolute paths, which is determined by joining `build.assetsPublicPath` and `build.assetsSubDirectory` in `config.js`.
+Em contraste, arquivos em `static/` não são nunca processados pelo Webpack: eles são copiados diretamente para seu destino final sem modificações, e com o mesmo nome de arquivo. Referências a esses arquivos precisam ser feitas com _paths_ absolutos, que são determinados através da junção de `build.assetsPublicPath` e `build.assetsSubDirectory` do arquivo `config.js`.
 
-As an example, with the following default values:
+Para exemplificar, usando os seguintes valores padrão:
 
 ``` js
 // config/index.js
@@ -51,6 +51,6 @@ module.exports = {
 }
 ```
 
-Any file placed in `static/` should be referenced using the absolute URL `/static/[filename]`. If you change `assetSubDirectory` to `assets`, then these URLs will need to be changed to `/assets/[filename]`.
+Qualquer arquivo posto em `static/` deverá ser referenciado usando o URL absoluto `/static/[filename]`. Se você mudar `assetSubDirectory` para `assets`, esses URLS precisam ser mudados para `/assets/[filename]`.
 
-We will learn more about the config file in the section about [backend integration](backend.md).
+Nós vamos aprender mais sobre o arquivo de configuração na seção sobre [integração com _backend_](backend.md).

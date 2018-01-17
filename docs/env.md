@@ -1,21 +1,21 @@
-# Environment Variables
+# Variáveis de Ambiente
 
-Sometimes it is practical to have different config values according to the environment that the application is running in.
+Às vezes é necessário ter dois valores de configuração distintos de acordo com o ambiente em que sua aplicação estiver rodando.
 
-As an example:
+Por exemplo:
 
 ```js
 // config/prod.env.js
 module.exports = {
   NODE_ENV: '"production"',
   DEBUG_MODE: false,
-  API_KEY: '"..."' // this is shared between all environments
+  API_KEY: '"..."' // isto é compartilhado por todos os ambientes
 }
 
 // config/dev.env.js
 module.exports = merge(prodEnv, {
   NODE_ENV: '"development"',
-  DEBUG_MODE: true // this overrides the DEBUG_MODE value of prod.env
+  DEBUG_MODE: true // isto se sobrepõe ao valor DEBUG_MODE de prod.env
 })
 
 // config/test.env.js
@@ -24,27 +24,27 @@ module.exports = merge(devEnv, {
 })
 ```
 
-> **Note:** string variables need to be wrapped into single and double quotes `'"..."'`
+> **Observação:** variáveis _string_ precisam ser envoltas em aspas simples e aspas duplas: `'"..."'`
 
-So, the environment variables are:
-- Production
+Assim, as variáveis de ambiente são:
+- Produção
     - NODE_ENV   = 'production',
     - DEBUG_MODE = false,
     - API_KEY    = '...'
-- Development
+- Desenvolvimento
     - NODE_ENV   = 'development',
     - DEBUG_MODE = true,
     - API_KEY    = '...'
-- Testing
+- Testes
     - NODE_ENV   = 'testing',
     - DEBUG_MODE = true,
     - API_KEY    = '...'
 
-As we can see, `test.env` inherits the `dev.env` and the `dev.env` inherits the `prod.env`.
+Como podemos ver, `test.env` herda o `dev.env` e o `dev.env` herda o `prod.env`.
 
 ### Usage		
 
-It is simple to use the environment variables in your code. For example:		
+É simples o uso de variáveis de ambiente no seu código. Por exemplo:
 
 ```js		
 Vue.config.productionTip = process.env.NODE_ENV === 'production'		
